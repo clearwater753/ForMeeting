@@ -26,6 +26,8 @@ git config --global user.name "单章辉"
 
 git checkout -b szh/0301_test
 
-5、放到暂存区
+5、放到暂存区和提交
 
 git add xxx.py(vscode不需要用这个命令)
+
+git commit -m "message"
