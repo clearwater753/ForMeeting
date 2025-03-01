@@ -22,5 +22,10 @@ git config --global user.name "单章辉"
 
  git config --global user.email "ci8278489@163.com"
 
+4、创建新的分支
 
+git checkout -b szh/0301_test
 
+5、放到暂存区
+
+git add xxx.py(vscode不需要用这个命令)
