@@ -42,7 +42,7 @@ git config --global http.proxy http://127.0.0.1:10809
 7、本地与远程仓库的交互
 比如开始时只有本地仓库，那么需要建立远程仓库，然后把远程仓库的内容pull到本地
 建立联系
-git remote add origin <远程仓库的URL>
+git remote add origin <远程仓库的URL或者git>
 拉取远程仓库main分支的内容
 git pull origin main
 推送main分支(第一次加-u第二次不用加)
@@ -66,3 +66,23 @@ git checkout -b szh/0301_test
 9、撤销提交
 撤销当前分支最后一次提交
 git reset --soft HEAD^
+回撤之后远程仓库报错，那就强制提交（多人项目时要小心使用）
+git push -f
+
+10、合并分支
+切换到主分支
+git checkout main
+合并
+git merge <branch-name>
+
+11、列出对应的远程仓库
+git remote -v
+
+12、git fetch和git pull的区别
+git fetch origin --depth 10
+git fetch: 是一个相对“保守”的命令，它用于从远程仓库获取最新的分支信息和提交记录，但不会自动合并这些更改到本地分支
+
+git pull origin main
+git pull: 是一个更“激进”的命令，它实际上是 git fetch 和 git merge 的组合。它不仅会从远程仓库获取最新的更改，还会立即将这些更改合并到当前的本地分支。
+
+13、合并冲突和合并分支
