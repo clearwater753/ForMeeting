@@ -86,3 +86,6 @@ git pull origin main
 git pull: 是一个更“激进”的命令，它实际上是 git fetch 和 git merge 的组合。它不仅会从远程仓库获取最新的更改，还会立即将这些更改合并到当前的本地分支。
 
 13、合并冲突和合并分支
+git merge：将一个分支的更改合并到另一个分支，同时保留分支的历史记录。
+git rebase：将一个分支的更改重新应用到另一个分支的顶部，同时“重写”分支的历史记录。
+git cherry-pick <comit-hash>: 将某个特定的提交提交到当前分支
