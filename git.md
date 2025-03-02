@@ -31,3 +31,28 @@ git checkout -b szh/0301_test
 git add xxx.py(vscode不需要用这个命令)
 
 git commit -m "message"
+
+6、本地git仓库上传github
+清除代理
+git config --global --unset http.proxy 
+git config --global --unset https.proxy 
+添加代理
+git config --global http.proxy http://127.0.0.1:10809
+
+7、本地与远程仓库的交互
+比如开始时只有本地仓库，那么需要建立远程仓库，然后把远程仓库的内容pull到本地
+建立联系
+git remote add origin <远程仓库的URL>
+拉取远程仓库main分支的内容
+git pull origin main
+推送main分支
+git push -u origin main
+推送当前分支
+git push -u origin HEAD
+删除远程分支
+git push origin --delete <远程分支名>
+查看远程分支
+git branch -r
+
+8、切换分支
+git checkout main
