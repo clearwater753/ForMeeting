@@ -27,4 +27,3 @@ softmax = Softmax()
 output = softmax.forward(x)
 grad_output = softmax.backward(grad_input)
 print(grad_output.shape)
-
