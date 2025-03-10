@@ -5,7 +5,7 @@ def bilinear_interpolation(x, y, points):
     x, y 是要插值的点的坐标
     points 是一个包含四个点的列表，每个点是 (x, y, value) 的形式
     '''
-    points = sorted(points)  # 按 x 排序
+    points = sorted(points, key=lambda p: (p[0], p[1]))  # 按照x, y排序
     (x1, y1, q11), (x1, y2, q12), (x2, y1, q21), (x2, y2, q22) = points
 
     if x1 == x2 or y1 == y2:
@@ -19,7 +19,8 @@ def bilinear_interpolation(x, y, points):
 
 if __name__ == "__main__":
     # 示例点 (x, y, value)
-    points = [(1, 1, 1), (1, 2, 2), (2, 1, 3), (2, 2, 4)]
+    # points = [(1, 1, 1), (1, 2, 2), (2, 1, 3), (2, 2, 4)]
+    points = [(2, 1, 3), (1, 1, 1), (1, 2, 2), (2, 2, 4)]
     x, y = 1.5, 1.5
     value = bilinear_interpolation(x, y, points)
     print(f"插值结果: {value}")

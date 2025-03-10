@@ -3,3 +3,6 @@
 *.json
 *.bin
 *.txt
+*.pt
+*.pth
+read/*
