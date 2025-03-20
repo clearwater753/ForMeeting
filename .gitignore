@@ -6,3 +6,5 @@
 *.pt
 *.pth
 read/*
+.gradio/*
+test.py
