@@ -7,3 +7,4 @@
 *.pth
 read/*
 .gradio/*
+**/__pycache__
